@@ -10,5 +10,15 @@ You cand find the documentation (Javadoc) of this project in the following link:
 
 https://alejandrobohal.github.io/LabArep-LoginService/.
 
+To generate the javadoc run the following command
+
+
+
+```
+  mvn javadoc:javadoc
+
+```
+
+
 
 
