@@ -1,15 +1,9 @@
 package edu.escuelaing.arep.secureapp;
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
 import edu.escuelaing.arep.secureapp.entities.User;
 import edu.escuelaing.arep.secureapp.service.CifrateService;
 import edu.escuelaing.arep.secureapp.service.UserService;
-import netscape.javascript.JSObject;
-import spark.Session;
 import spark.staticfiles.StaticFilesConfiguration;
-import sun.net.www.http.HttpClient;
-
-import javax.sound.midi.Soundbank;
 import java.util.Map;
 
 import static spark.Spark.*;
