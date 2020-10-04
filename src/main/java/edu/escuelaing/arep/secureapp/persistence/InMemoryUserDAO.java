@@ -3,9 +3,15 @@ package edu.escuelaing.arep.secureapp.persistence;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * The type In memory user dao.
+ */
 public class InMemoryUserDAO implements IPersistenceDAO{
     private Map<String,String> users;
 
+    /**
+     * Instantiates a new In memory user dao.
+     */
     public InMemoryUserDAO(){
         users = new HashMap<>();
         users.put("user1","fa26be19de6bff93f70bc2308434e4a440bbad02");

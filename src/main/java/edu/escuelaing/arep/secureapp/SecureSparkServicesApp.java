@@ -13,10 +13,23 @@ import javax.sound.midi.Soundbank;
 import java.util.Map;
 
 import static spark.Spark.*;
+
+/**
+ * The type Secure spark services app.
+ */
 public class SecureSparkServicesApp {
     private static UserService us = new UserService();
     private static Map<String,String> users = us.getUsers();
+    /**
+     * The constant cifrate.
+     */
     public static CifrateService  cifrate = new CifrateService();
+
+    /**
+     * Main.
+     *
+     * @param args the args
+     */
     public static void main(String ... args){
         port(getPort());
         secure("keystores/ecikeystore.p12", "pansito", null,null);
@@ -69,6 +82,12 @@ public class SecureSparkServicesApp {
         });
 
     }
+
+    /**
+     * Gets port.
+     *
+     * @return the port
+     */
     static int getPort() {
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));

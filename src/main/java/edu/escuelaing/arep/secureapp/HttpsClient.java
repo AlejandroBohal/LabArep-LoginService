@@ -13,7 +13,13 @@ import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
 
 
+/**
+ * The type Https client.
+ */
 public class HttpsClient {
+    /**
+     * Init.
+     */
     public static void init() {
         File trustStoreFile = new File("keystores/myTrustStore");
         char[] trustStorePassword = "pansito".toCharArray();
@@ -35,6 +41,13 @@ public class HttpsClient {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Gets server info.
+     *
+     * @return the server info
+     * @throws IOException the io exception
+     */
     public static String getServerInfo() throws IOException {
         URL url = new URL("https://ec2-34-228-60-112.compute-1.amazonaws.com:5001/hello");
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
